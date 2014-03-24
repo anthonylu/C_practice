@@ -111,9 +111,9 @@ int main(int argc, const char * argv[])
     for (b = 0; b < 10; ++b)
         push(s, b);
     for (b = 0; b < 10; ++b)
-        printf("pop stack: %d \n", pop(s));
+        printf("pop stack: %d\n", pop(s));
     push(s, 14);
-    printf("pop stack: %d \n", pop(s));
+    printf("pop stack: %d\n", pop(s));
     return 0;
 }
 

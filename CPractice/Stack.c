@@ -20,15 +20,12 @@ Stack* getStackInstant() {
     return stack;
 }
 
-int extend(Stack* s);
-int push(Stack* s, int d) {
-    int result = -1;
+void extend(Stack* s);
+void push(Stack* s, int d) {
     if (s->top == s->current_size-1) {
-        result = extend(s);
+        extend(s);
     }
-    s->data[s->top] = d;
-    s->top = s->top + 1;
-    return result;
+    s->data[s->top++] = d;
 }
 
 int pop(Stack* s) {
@@ -36,19 +33,11 @@ int pop(Stack* s) {
     if (s->top == 0) {
         return result;
     }
-    s->top = s->top-1;
-    result = s->data[s->top];
+    result = s->data[--s->top];
     return result;
 }
 
-int extend(Stack *s) {
-    int* newData = malloc(sizeof(int)*(s->current_size+STACKSIZE));
-    int i = 0, result = -1;
-    for (; i < s->current_size; ++i) {
-        newData[i] = s->data[i];
-    }
-    free(s->data);
+void extend(Stack *s) {
+    s->data = realloc(s->data, sizeof(int)*(s->current_size+STACKSIZE));
     s->current_size += STACKSIZE;
-    s->data = newData;
-    return result;
 }
