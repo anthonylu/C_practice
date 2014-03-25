@@ -15,6 +15,7 @@
 #include "sort.h"
 #include "Compare.h"
 #include "Stack.h"
+#include "Queue.h"
 
 int main(int argc, const char * argv[])
 {
@@ -58,6 +59,7 @@ int main(int argc, const char * argv[])
     printf("search 3thMin(11,15,18,19,32,33,47): %d\n", kthMin(input2, 7, 0, 3));
     printf("search 5thMin(11,15,18,19,32,33,47): %d\n", kthMin(input2, 7, 0, 5));
     printf("search 3thMin(3,3,3,3,3,3,4): %d\n", kthMin(input3, 7, 0, 3));*/
+    
     // testing swap
     int a = 3, b = 4;
     /*swapInt(&a, &b);
@@ -68,6 +70,7 @@ int main(int argc, const char * argv[])
     printf("swap(a=3,b=3)= (a=%d,b=%d)\n", a, b);
     swapInt(&a, &a);
     printf("swap(a=3,a=3)= (a=%d,b=%d)\n", a, b);*/
+    
     // testing quickSort
     /*printf("quickSort(");
     for (a=0; a<5; ++a) {
@@ -114,6 +117,14 @@ int main(int argc, const char * argv[])
         printf("pop stack: %d\n", pop(s));
     push(s, 14);
     printf("pop stack: %d\n", pop(s));
-    return 0;
+    
+    //testing queue
+    Queue* q = getQueueInstance();
+    for (b=0; b<2; ++b) {
+        for (a=0; a<10; ++a)
+            enqueue(q,a);
+        for (a = 0; a < 10; ++a)
+            printf("dequeue: %d\n", dequeue(q));
+    }
 }
 

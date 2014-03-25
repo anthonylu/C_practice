@@ -15,6 +15,7 @@
 		640B4C7C18E045C500FA7FF1 /* Search.c in Sources */ = {isa = PBXBuildFile; fileRef = 640B4C7118E045C500FA7FF1 /* Search.c */; };
 		640B4C7D18E045C500FA7FF1 /* sort.c in Sources */ = {isa = PBXBuildFile; fileRef = 640B4C7318E045C500FA7FF1 /* sort.c */; };
 		640B4C7E18E045C500FA7FF1 /* Stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 640B4C7518E045C500FA7FF1 /* Stack.c */; };
+		6422869818E04F7D003071C1 /* Queue.c in Sources */ = {isa = PBXBuildFile; fileRef = 6422869718E04F7D003071C1 /* Queue.c */; };
 		64E2EB3D18E044BD000A1883 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 64E2EB3C18E044BD000A1883 /* main.c */; };
 		64E2EB3F18E044BD000A1883 /* CPractice.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 64E2EB3E18E044BD000A1883 /* CPractice.1 */; };
 /* End PBXBuildFile section */
@@ -49,6 +50,8 @@
 		640B4C7418E045C500FA7FF1 /* sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sort.h; sourceTree = "<group>"; };
 		640B4C7518E045C500FA7FF1 /* Stack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Stack.c; sourceTree = "<group>"; };
 		640B4C7618E045C500FA7FF1 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		6422869718E04F7D003071C1 /* Queue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Queue.c; sourceTree = "<group>"; };
+		6422869918E04F8A003071C1 /* Queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
 		64E2EB3918E044BD000A1883 /* CPractice */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CPractice; sourceTree = BUILT_PRODUCTS_DIR; };
 		64E2EB3C18E044BD000A1883 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		64E2EB3E18E044BD000A1883 /* CPractice.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = CPractice.1; sourceTree = "<group>"; };
@@ -101,6 +104,8 @@
 				640B4C7518E045C500FA7FF1 /* Stack.c */,
 				640B4C7618E045C500FA7FF1 /* Stack.h */,
 				64E2EB3C18E044BD000A1883 /* main.c */,
+				6422869718E04F7D003071C1 /* Queue.c */,
+				6422869918E04F8A003071C1 /* Queue.h */,
 				64E2EB3E18E044BD000A1883 /* CPractice.1 */,
 			);
 			path = CPractice;
@@ -162,6 +167,7 @@
 				640B4C7818E045C500FA7FF1 /* Compare.c in Sources */,
 				640B4C7718E045C500FA7FF1 /* ArithmetricSequence.c in Sources */,
 				640B4C7B18E045C500FA7FF1 /* Palindrome.c in Sources */,
+				6422869818E04F7D003071C1 /* Queue.c in Sources */,
 				640B4C7C18E045C500FA7FF1 /* Search.c in Sources */,
 				640B4C7E18E045C500FA7FF1 /* Stack.c in Sources */,
 				640B4C7918E045C500FA7FF1 /* FibonacciSequence.c in Sources */,
