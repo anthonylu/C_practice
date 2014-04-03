@@ -110,21 +110,34 @@ int main(int argc, const char * argv[])
     printf("max(4,4)=%d compare(4,4)=%d\n", findMax(b, b), compareInt(b, b));*/
     
     //testing stack
-    Stack* s = getStackInstant();
+    /*Stack* s = getStackInstant();
     for (b = 0; b < 10; ++b)
         push(s, b);
     for (b = 0; b < 10; ++b)
         printf("pop stack: %d\n", pop(s));
     push(s, 14);
-    printf("pop stack: %d\n", pop(s));
+    printf("pop stack: %d\n", pop(s));*/
     
     //testing queue
-    Queue* q = getQueueInstance();
-    for (b=0; b<2; ++b) {
-        for (a=0; a<10; ++a)
-            enqueue(q,a);
-        for (a = 0; a < 10; ++a)
-            printf("dequeue: %d\n", dequeue(q));
-    }
+    /*Queue* q = getQueueInstance();
+    for (a=0; a<5; ++a)
+        enqueue(q,a);
+    for (a = 0; a < 5; ++a)
+        printf("dequeue: %d\n", dequeue(q));
+    for (a=0; a<9; ++a)
+        enqueue(q,a);
+    for (a = 0; a < 10; ++a)
+        printf("dequeue: %d\n", dequeue(q));
+    for (a=0; a<10; ++a)
+        enqueue(q,a);
+    for (b = 0; b < 10; ++b)
+        printf("dequeue: %d\n", dequeue(q));*/
+    
+    //testing binary search
+    int sorted[10] = {5, 11, 23, 31, 41, 53, 61, 73, 89, 97};
+    printf("binary search 97: %d\n", sorted[binarySearch(sorted, 10, 97)]);
+    printf("binary search 41: %d\n", sorted[binarySearch(sorted, 10, 41)]);
+    printf("binary search 5: %d\n", sorted[binarySearch(sorted, 10, 5)]);
+    return 0;
 }
 

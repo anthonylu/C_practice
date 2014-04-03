@@ -64,3 +64,20 @@ int kthMin(int a[], int length, int start, int k) {
         return kthMin(a, j+1, 0, k);
     }
 }
+
+int binarySearch(int* sortedData, int size, int target) {
+    int result = -1, start = 0, end = size-1, middle = (0.5+(start+end)/2);
+    while(start < end) {
+        if (sortedData[middle] == target) {
+            result = middle;
+            break;
+        } else if (sortedData[middle] > target) {
+            end = middle-1;
+        } else {
+            start = middle+1;
+        }
+        middle = (0.5+(start+end)/2);
+    }
+    if (sortedData[start] == target) result = start;
+    return result;
+}

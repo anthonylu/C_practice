@@ -9,7 +9,7 @@
 #ifndef CPractice_Queue_h
 #define CPractice_Queue_h
 typedef struct queue {
-    int head, tail, size;
+    int head, tail, size, count;
     int* data;
 } Queue;
 

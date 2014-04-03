@@ -2,6 +2,8 @@
 //  Queue.c
 //  CPractice
 //
+//  A circular queue implementation
+//
 //  Created by ChangChun Lu on 3/24/14.
 //  Copyright (c) 2014 ChangChun Lu. All rights reserved.
 //
@@ -15,39 +17,42 @@ Queue* getQueueInstance() {
     Queue* q = malloc(sizeof(struct queue));
     q->head = 0;
     q->tail = 0;
+    q->count = 0;
     q->size = QUEUESIZE;
     q->data = malloc(sizeof(int)*QUEUESIZE);
     return q;
 }
 
 void extendQueue(Queue* q) {
-    if (q->head >= QUEUESIZE) {// remove unused space before q-> head
-        int* newData = malloc(sizeof(int)*(q->size-QUEUESIZE));
-        int i,j;
-        for (i = q->head, j = 0; i < q->tail; ++i, ++j) {
-            newData[j] = q->data[i];
-        }
-        free(q->data);
-        q->data = newData;
-        q->size = q->size-QUEUESIZE;
-        q->tail -= q->head;
-        q->head = 0;
-    } else {
-        q->size += QUEUESIZE;
-        q->data = realloc(q->data, sizeof(int)*q->size);
+    //printf("extend queue\n");
+    int* newData = malloc(sizeof(int)*(q->size+QUEUESIZE));
+    int i,j;
+    for (i = q->head, j = 0; j < q->count; ++j, i = (i+1)%q->size) {
+        newData[j] = q->data[i];
     }
+    free(q->data);
+    q->data = newData;
+    q->size += QUEUESIZE;
+    q->tail = q->count;
+    q->head = 0;
 }
 
 void enqueue(Queue* q, int d) {
-    if (q->tail == q->size-1) {
+    //printf("enqueue:%d\n",d);
+    if (q->count == q->size-1) {
         extendQueue(q);
     }
-    q->data[q->tail++] = d;
+    ++q->count;
+    q->data[q->tail] = d;
+    q->tail = (q->tail+1)%q->size;
 }
 
 int dequeue(Queue* q) {
     if (q->head == q->tail) {
         return -1;
     }
-    return q->data[q->head++];
+    --q->count;
+    int result = q->data[q->head];
+    q->head = (q->head+1)%q->size;
+    return result;
 }
