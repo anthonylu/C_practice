@@ -16,4 +16,5 @@ typedef struct queue {
 Queue* getQueueInstance();
 void enqueue(Queue* q, int d);
 int dequeue(Queue* q);
+void freeQueue(Queue* q);
 #endif

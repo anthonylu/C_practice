@@ -56,3 +56,8 @@ int dequeue(Queue* q) {
     q->head = (q->head+1)%q->size;
     return result;
 }
+
+void freeQueue(Queue* q) {
+    free(q->data);
+    free(q);
+}

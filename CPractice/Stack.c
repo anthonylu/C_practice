@@ -41,3 +41,8 @@ void extend(Stack *s) {
     s->data = realloc(s->data, sizeof(int)*(s->current_size+STACKSIZE));
     s->current_size += STACKSIZE;
 }
+
+void freeStack(Stack *s) {
+    free(s->data);
+    free(s);
+}

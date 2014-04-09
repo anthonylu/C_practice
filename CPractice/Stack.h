@@ -16,4 +16,5 @@ typedef struct stack {
 Stack* getStackInstant();
 void push(Stack* s, int data);
 int pop(Stack* s);
+void freeStack(Stack *s);
 #endif

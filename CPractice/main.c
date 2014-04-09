@@ -16,6 +16,7 @@
 #include "Compare.h"
 #include "Stack.h"
 #include "Queue.h"
+#include "PLA.h"
 
 int main(int argc, const char * argv[])
 {
@@ -116,10 +117,11 @@ int main(int argc, const char * argv[])
     for (b = 0; b < 10; ++b)
         printf("pop stack: %d\n", pop(s));
     push(s, 14);
-    printf("pop stack: %d\n", pop(s));*/
+    printf("pop stack: %d\n", pop(s));
+    freeStack(s);
     
     //testing queue
-    /*Queue* q = getQueueInstance();
+    Queue* q = getQueueInstance();
     for (a=0; a<5; ++a)
         enqueue(q,a);
     for (a = 0; a < 5; ++a)
@@ -131,13 +133,17 @@ int main(int argc, const char * argv[])
     for (a=0; a<10; ++a)
         enqueue(q,a);
     for (b = 0; b < 10; ++b)
-        printf("dequeue: %d\n", dequeue(q));*/
+        printf("dequeue: %d\n", dequeue(q));
+    freeQueue(q);*/
     
     //testing binary search
-    int sorted[10] = {5, 11, 23, 31, 41, 53, 61, 73, 89, 97};
+    /*int sorted[10] = {5, 11, 23, 31, 41, 53, 61, 73, 89, 97};
     printf("binary search 97: %d\n", sorted[binarySearch(sorted, 10, 97)]);
     printf("binary search 41: %d\n", sorted[binarySearch(sorted, 10, 41)]);
-    printf("binary search 5: %d\n", sorted[binarySearch(sorted, 10, 5)]);
+    printf("binary search 5: %d\n", sorted[binarySearch(sorted, 10, 5)]);*/
+    
+    //testing ML/PLA
+    pla_main(argc, argv);
     return 0;
 }
 

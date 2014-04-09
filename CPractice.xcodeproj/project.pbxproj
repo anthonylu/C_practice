@@ -15,6 +15,8 @@
 		640B4C7C18E045C500FA7FF1 /* Search.c in Sources */ = {isa = PBXBuildFile; fileRef = 640B4C7118E045C500FA7FF1 /* Search.c */; };
 		640B4C7D18E045C500FA7FF1 /* sort.c in Sources */ = {isa = PBXBuildFile; fileRef = 640B4C7318E045C500FA7FF1 /* sort.c */; };
 		640B4C7E18E045C500FA7FF1 /* Stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 640B4C7518E045C500FA7FF1 /* Stack.c */; };
+		64104BEF18F12B210063BE65 /* PLA.c in Sources */ = {isa = PBXBuildFile; fileRef = 64104BEE18F12B210063BE65 /* PLA.c */; };
+		64104BF618F18C530063BE65 /* Vector.c in Sources */ = {isa = PBXBuildFile; fileRef = 64104BF518F18C530063BE65 /* Vector.c */; };
 		6422869818E04F7D003071C1 /* Queue.c in Sources */ = {isa = PBXBuildFile; fileRef = 6422869718E04F7D003071C1 /* Queue.c */; };
 		64E2EB3D18E044BD000A1883 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 64E2EB3C18E044BD000A1883 /* main.c */; };
 		64E2EB3F18E044BD000A1883 /* CPractice.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 64E2EB3E18E044BD000A1883 /* CPractice.1 */; };
@@ -23,8 +25,8 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		64E2EB3718E044BD000A1883 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1;
 			dstSubfolderSpec = 0;
 			files = (
 				64E2EB3F18E044BD000A1883 /* CPractice.1 in CopyFiles */,
@@ -50,6 +52,10 @@
 		640B4C7418E045C500FA7FF1 /* sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sort.h; sourceTree = "<group>"; };
 		640B4C7518E045C500FA7FF1 /* Stack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Stack.c; sourceTree = "<group>"; };
 		640B4C7618E045C500FA7FF1 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		64104BEE18F12B210063BE65 /* PLA.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PLA.c; sourceTree = "<group>"; };
+		64104BF218F1321D0063BE65 /* PLA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLA.h; sourceTree = "<group>"; };
+		64104BF518F18C530063BE65 /* Vector.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Vector.c; sourceTree = "<group>"; };
+		64104BF718F18CA20063BE65 /* Vector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
 		6422869718E04F7D003071C1 /* Queue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Queue.c; sourceTree = "<group>"; };
 		6422869918E04F8A003071C1 /* Queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
 		64E2EB3918E044BD000A1883 /* CPractice */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CPractice; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +74,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64104BED18F12AD70063BE65 /* ML */ = {
+			isa = PBXGroup;
+			children = (
+				64104BEE18F12B210063BE65 /* PLA.c */,
+				64104BF218F1321D0063BE65 /* PLA.h */,
+			);
+			name = ML;
+			sourceTree = "<group>";
+		};
 		64E2EB3018E044BD000A1883 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +102,7 @@
 		64E2EB3B18E044BD000A1883 /* CPractice */ = {
 			isa = PBXGroup;
 			children = (
+				64104BED18F12AD70063BE65 /* ML */,
 				640B4C6718E045C500FA7FF1 /* ArithmetricSequence.c */,
 				640B4C6818E045C500FA7FF1 /* ArithmetricSequence.h */,
 				640B4C6918E045C500FA7FF1 /* Compare.c */,
@@ -106,6 +122,8 @@
 				64E2EB3C18E044BD000A1883 /* main.c */,
 				6422869718E04F7D003071C1 /* Queue.c */,
 				6422869918E04F8A003071C1 /* Queue.h */,
+				64104BF518F18C530063BE65 /* Vector.c */,
+				64104BF718F18CA20063BE65 /* Vector.h */,
 				64E2EB3E18E044BD000A1883 /* CPractice.1 */,
 			);
 			path = CPractice;
@@ -162,6 +180,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64104BF618F18C530063BE65 /* Vector.c in Sources */,
+				64104BEF18F12B210063BE65 /* PLA.c in Sources */,
 				640B4C7A18E045C500FA7FF1 /* GeometricSequence.c in Sources */,
 				64E2EB3D18E044BD000A1883 /* main.c in Sources */,
 				640B4C7818E045C500FA7FF1 /* Compare.c in Sources */,
