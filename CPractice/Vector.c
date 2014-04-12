@@ -57,20 +57,22 @@ double dotProduct(Vector* a, Vector* b) {
     return result;
 }
 
-// a = a + b
-void vectorAdd(Vector* a, Vector* b) {
+// a = ra*a + rb*b
+void vectorAddWithScalar(Vector* a, Vector* b, double ra, double rb) {
     int i = 0;
     if (a->dim == b->dim)
         for (i = 0; i < a->dim; ++i)
-            a->elem[i] += b->elem[i];
+            a->elem[i] = ra*a->elem[i]+rb*b->elem[i];
+}
+
+// a = a + b
+void vectorAdd(Vector* a, Vector* b) {
+    vectorAddWithScalar(a, b, 1.0, 1.0);
 }
 
 // a = a - b
 void vectorSub(Vector* a, Vector* b) {
-    int i = 0;
-    if (a->dim == b->dim)
-        for (i = 0; i < a->dim; ++i)
-            a->elem[i] -= b->elem[i];
+    vectorAddWithScalar(a, b, 1.0, -1.0);
 }
 
 void printVector(Vector* v) {

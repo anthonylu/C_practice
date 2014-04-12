@@ -66,6 +66,18 @@
             argument = "/Users/cclu/Downloads/hw1_15_train.txt"
             isEnabled = "YES">
          </CommandLineArgument>
+         <CommandLineArgument
+            argument = "2000"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "/Users/cclu/Downloads/hw1_18_train.txt"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "/Users/cclu/Downloads/hw1_18_test.txt"
+            isEnabled = "YES">
+         </CommandLineArgument>
       </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>

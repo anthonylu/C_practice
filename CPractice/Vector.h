@@ -17,6 +17,7 @@ Vector* getVectorInstance(int dim);
 Vector* duplicateVector(Vector* a);
 int replaceByVector(Vector* a, Vector* b);
 double dotProduct(Vector* a, Vector* b);
+void vectorAddWithScalar(Vector* a, Vector* b, double ra, double rb);
 void vectorAdd(Vector* a, Vector* b);
 void vectorSub(Vector* a, Vector* b);
 void printVector(Vector* v);
