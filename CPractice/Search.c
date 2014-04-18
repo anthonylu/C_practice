@@ -79,5 +79,7 @@ int binarySearch(int* sortedData, int size, int target) {
         middle = (0.5+(start+end)/2);
     }
     if (sortedData[start] == target) result = start;
+    else if (sortedData[start] > target) result = -start-1;
+    else result = -(start+1)-1;
     return result;
 }

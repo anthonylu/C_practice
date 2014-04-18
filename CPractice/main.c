@@ -137,13 +137,16 @@ int main(int argc, const char * argv[])
     freeQueue(q);*/
     
     //testing binary search
-    /*int sorted[10] = {5, 11, 23, 31, 41, 53, 61, 73, 89, 97};
-    printf("binary search 97: %d\n", sorted[binarySearch(sorted, 10, 97)]);
+    int sorted[10] = {5, 11, 23, 31, 41, 53, 61, 73, 89, 97};
+    printf("binary search 13: %d\n", binarySearch(sorted, 10, 13));
+    printf("binary search 99: %d\n", binarySearch(sorted, 10, 99));
+    printf("binary search 4: %d\n", binarySearch(sorted, 10, 4));
+    /*printf("binary search 97: %d\n", sorted[binarySearch(sorted, 10, 97)]);
     printf("binary search 41: %d\n", sorted[binarySearch(sorted, 10, 41)]);
     printf("binary search 5: %d\n", sorted[binarySearch(sorted, 10, 5)]);*/
     
     //testing ML/PLA
-    pla_main(argc, argv);
+    //pla_main(argc, argv);
     return 0;
 }
 

@@ -149,10 +149,6 @@ PLANode* shufflePLANode(PLANode* head) {
         tmp = tmp->next;
     }
     shuffle(nodes, size);
-    /*for (i = 0; i < size; ++i)
-        printf("%d ", seq[i]);
-    printf("\n");*/
-    // shuffle nodes
     for (i = 0; i < size-1; ++i) {
         nodes[i]->next = nodes[i+1];
     }
